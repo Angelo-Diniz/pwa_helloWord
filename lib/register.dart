@@ -33,7 +33,7 @@ class _RegisterPageState extends State<RegisterPage> {
         r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
     RegExp regex = new RegExp(pattern);
     if (!regex.hasMatch(value)) {
-      return 'Email format is invalid';
+      return 'Formato de e-mail inválido';
     } else {
       return null;
     }
@@ -41,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
   String pwdValidator(String value) {
     if (value.length < 8) {
-      return 'Password must be longer than 8 characters';
+      return 'Senha deve ter mais de 8 caracteres';
     } else {
       return null;
     }
@@ -66,7 +66,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: firstNameInputController,
                   validator: (value) {
                     if (value.length < 3)
-                      return "Please enter a valid first name.";
+                      return "Insira um nome válido, por favor.";
                     else
                       return null;
                   },
@@ -77,7 +77,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   controller: lastNameInputController,
                   validator: (value) {
                     if (value.length < 3) {
-                      return "Please enter a valid last name.";
+                      return "Insidra um sobrenome válido, por favor.";
                     } else
                       return null;
                   },
@@ -151,11 +151,11 @@ class _RegisterPageState extends State<RegisterPage> {
                           context: context,
                           builder: (BuildContext context) {
                             return AlertDialog(
-                              title: Text("Error"),
-                              content: Text("The passwords do not match"),
+                              title: Text("Erro"),
+                              content: Text("Senhas não conferem"),
                               actions: <Widget>[
                                 FlatButton(
-                                  child: Text("Close"),
+                                  child: Text("Fechar"),
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
