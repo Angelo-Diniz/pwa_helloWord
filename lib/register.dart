@@ -51,7 +51,7 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Register"),
+        title: Text("Cadastro"),
       ),
       body: Container(
         padding: const EdgeInsets.all(20.0),
@@ -104,7 +104,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   validator: pwdValidator,
                 ),
                 RaisedButton(
-                  child: Text("Register"),
+                  child: Text("Cadastrar"),
                   color: Theme.of(context).primaryColor,
                   textColor: Colors.white,
                   onPressed: () {
@@ -168,9 +168,18 @@ class _RegisterPageState extends State<RegisterPage> {
                     }
                   },
                 ),
-                Text("Already have an account?"),
+                SizedBox(
+                  height: 50,
+                ),
+                Text("Já possui uma conta?"),
                 FlatButton(
-                  child: Text("Login here!"),
+                  color: Theme.of(context).primaryColor,
+                  child: Text(
+                    "Entre aqui!",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                   onPressed: () {
                     Navigator.pop(context);
                   },
