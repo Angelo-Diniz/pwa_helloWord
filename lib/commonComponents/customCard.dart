@@ -16,14 +16,15 @@ class CustomCard extends StatelessWidget {
           children: <Widget>[
             Text(title),
             FlatButton(
-                child: Text("Clique e veja mais"),
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => GymDetail(
-                              title: title, description: description)));
-                }),
+              child: Text("Clique e veja mais"),
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            GymDetail(title: title, description: description)));
+              },
+            ),
           ],
         ),
       ),

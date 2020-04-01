@@ -111,7 +111,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   Text("Ainda não tem conta no nosso App? "),
                   FlatButton(
-                    child: Text("Cadastra-se aqui!"),
+                    child: Text("Cadastre-se aqui!"),
                     onPressed: () {
                       Navigator.pushNamed(context, "/register");
                     },
