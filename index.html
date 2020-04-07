@@ -3,7 +3,7 @@
 
 <head>
     <!--Configurações da pagina-->
-    <link rel="icon" type="imagem/png" href="image/icon.png" />
+    <link rel="icon" type="imagem/png" href="image/beer-icon-256x256.png" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--MANIFESTO-->
@@ -27,6 +27,8 @@
     </div>
 </body>
 <script>
+    navigator.serviceWorker.register('sw.js');
+
     function alerta_Teste() {
         alert("Oá mundo")
     }
